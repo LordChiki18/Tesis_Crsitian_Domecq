@@ -190,10 +190,14 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-    # "/var/www/static/",
-]
+# STATICFILES_DIRS = [
+#     BASE_DIR / "static",
+#     # "/var/www/static/",
+# ]
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]  # Solo si tienes una carpeta "static" en tu proyecto
+
+
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
