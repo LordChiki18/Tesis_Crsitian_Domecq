@@ -4,80 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af25b3b7-91e0-4a9d-9baa-edcc0fa0bd78" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Tesis_Crsitian_Domecq.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.render.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aplicaciones/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aplicaciones/api/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aplicaciones/api/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aplicaciones/api/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aplicaciones/api/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aplicaciones/api/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aplicaciones/api/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aplicaciones/api/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aplicaciones/api/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aplicaciones/api/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aplicaciones/cliente/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aplicaciones/cliente/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aplicaciones/cliente/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aplicaciones/cliente/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aplicaciones/cliente/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aplicaciones/cliente/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aplicaciones/cliente/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aplicaciones/cliente/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aplicaciones/cliente/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aplicaciones/cuentas/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aplicaciones/cuentas/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aplicaciones/cuentas/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aplicaciones/cuentas/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aplicaciones/cuentas/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aplicaciones/cuentas/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aplicaciones/cuentas/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aplicaciones/cuentas/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aplicaciones/cuentas/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aplicaciones/cuentas/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aplicaciones/front/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aplicaciones/front/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aplicaciones/front/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aplicaciones/front/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aplicaciones/front/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aplicaciones/front/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aplicaciones/front/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/aplicaciones/front/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/styles_dashboard.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/exportarcsv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/exportarxlsx.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/xlsx.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/main/media/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/main/media/home_background.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/main/media/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/base2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/clients/contactos.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/clients/cuentas.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/clients/datos.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/clients/deposito.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/clients/movimientos.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/clients/reporte.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/clients/retiro.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/clients/transferencias.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/pages/about.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/pages/contact.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/pages/cuentas_desc.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/pages/politicas.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/pages/terminos_condiciones.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/registration/registro.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/registration/registro_contacto.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/registration/registro_cuentas.html" afterDir="false" />
+    <list default="true" id="af25b3b7-91e0-4a9d-9baa-edcc0fa0bd78" name="Changes" comment="Primer commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tesis_Crsitian_Domecq/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tesis_Crsitian_Domecq/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,34 +16,46 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;LordChiki18&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/LordChiki18/Tesis_Crsitian_Domecq&quot;,
+    &quot;accountId&quot;: &quot;1f95cd0d-b02f-49e4-bb3e-e45bb7265ff0&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="307J1ypJ4Xl50qUQ0hBZAthkIe6" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Django Server.Tesis_Crsitian_Domecq.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
-    "django.template.preview.state": "SHOW_EDITOR_AND_PREVIEW",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/domec/PycharmProjects/Tesis_Crsitian_Domecq",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Django Server.Tesis_Crsitian_Domecq.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
+    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR_AND_PREVIEW&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/domec/PycharmProjects/Tesis_Crsitian_Domecq&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\domec\PycharmProjects\Tesis_Crsitian_Domecq" />
@@ -166,11 +107,33 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1752972466667</updated>
-      <workItem from="1752972467722" duration="1707000" />
+      <workItem from="1752972467722" duration="2130000" />
+      <workItem from="1752975493003" duration="73000" />
     </task>
+    <task id="LOCAL-00001" summary="Primer commit">
+      <option name="closed" value="true" />
+      <created>1752974225544</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1752974225544</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Primer commit">
+      <option name="closed" value="true" />
+      <created>1752974236934</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1752974236934</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Primer commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Primer commit" />
   </component>
 </project>
