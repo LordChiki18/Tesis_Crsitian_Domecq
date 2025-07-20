@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <section class="main">
+        <div class="main-top">
+            <h1>Registrar Cuenta</h1>
+        </div>
+        <div class="main">
+            <div class="main-skills-contactos">
+                <div class="card">
+                    <form action="{% url 'solicitar_cuenta' %}" method="post">
+                        <h4>Solicita tu cuenta ya!!</h4>
+                        {% csrf_token %}
+                        {{ form.non_field_errors }}
+                        <br>
+                        <div class="form-group">
+                            <p>Tipo de cuenta:</p>
+                            {{ form.tipo_cuenta }}
+                        </div>
+                        <div class="form-group">
+                            <p>Tipo de moneda:</p>
+                            {{ form.moneda }}
+                        </div>
+                        <div class="form-group">
+                            <p>Saldo:</p>
+                            {{ form.saldo }}
+                        </div>
+                        <br>
+
+                        {% if form.errors %}
+                            <div class="form-errors">
+                                <p>Error(es) en el formulario:</p>
+                                <ul>
+                                    {% for field, errors in form.errors.items %}
+                                        {% if field == 'saldo' %}
+                                            {% for error in errors %}
+                                                <li>{{ error }}</li>
+                                            {% endfor %}
+                                        {% endif %}
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        {% endif %}
+                        <button class="btn form__btn" type="submit">Solicitar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}

@@ -1,0 +1,50 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <link rel="icon" href="{% static 'main/media/favicon.ico' %}" type="image/x-icon">
+    <link
+            href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+    />
+    <script src="{% static 'js/script.js' %}"></script>
+    <title>Banco DOCAP</title>
+  </head>
+  <body>
+    <header>
+      <nav class="sectionh__container navh__container">
+        <div class="nav__logo" onclick="redirigirAInicio()"><img src="{% static 'main/media/logo.png' %}" alt="Logo"></div>
+        <div class="nav__logo" onclick="redirigirAInicio()">Banco DOCAP</div>
+        <ul class="nav__links">
+            <li class="link"><a href="{% url 'cuentas_desc' %}">Cuentas</a></li>
+            <li class="link"><a href="{% url 'about_desc' %}">Sobre Nosotros</a></li>
+            <li class="link"><a href="{% url 'contact_desc' %}">Contacto</a></li>
+        </ul>
+        <a href={% url 'iniciar_sesion' %}>
+            <button class="btncli">Online Banking</button>
+            </a>
+            <a href={% url 'registro' %}>
+                <button class="btn">Quiero ser Cliente</button>
+            </a>
+    </nav>
+    {% block content %}
+
+    {% endblock content %}
+</header>
+<footer class="footer">
+    <div class="footer__bar">
+        <div class="footer__bar__content">
+            <h3 style="color: white;">Contigo en todo momento</h3>
+            <div class="footer__socials">
+                <a href="{% url 'contact_desc' %}">Contacto</a>
+                <a href="{% url 'politicas_desc' %}">Politica</a>
+                <a href="{% url 'terminos_desc' %}">Terminos</a>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

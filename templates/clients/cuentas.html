@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <section class="main">
+        <div class="main-top">
+            <h1>Mis Cuentas</h1>
+            <a href="{% url 'solicitar_cuenta' %}" class="create-account-button">Crear Cuenta</a>
+        </div>
+        <div class="main-skills">
+            {% if cuentas %}
+                {% for cuenta in cuentas %}
+                    <div class="card"><i class="fas fa-money-check-dollar"></i>
+                        <h3>{{ cuenta.tipo_cuenta }}</h3>
+                        <p>Nro.: {{ cuenta.nro_cuenta }}</p>
+                        <h3 id="amountCtte{{ cuenta.nro_cuenta }}" data-original-monto="{{ cuenta.saldo }} {{ cuenta.moneda }}">{{ cuenta.saldo }} {{ cuenta.moneda }}</h3>
+                        <button id="toggleAmountCtte{{ cuenta.nro_cuenta }}"
+                                onclick="toggleMontoCtte({{ cuenta.nro_cuenta }})">Ocultar monto
+                        </button>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p>No tienes cuentas. ¿Deseas crear una cuenta?</p>
+                <a href="{% url 'solicitar_cuenta' %}">Crear Cuenta</a>
+            {% endif %}
+        </div>
+        <script>
+            function toggleMontoCtte(numeroCuenta) {
+                var amountElement = document.getElementById("amountCtte" + numeroCuenta);
+                var toggleButton = document.getElementById("toggleAmountCtte" + numeroCuenta);
+
+                if (amountElement.innerHTML !== "**********") {
+                    var montoOriginal = amountElement.getAttribute("data-original-monto");
+                    amountElement.innerHTML = "**********";
+                    toggleButton.innerHTML = "Mostrar monto";
+                    amountElement.setAttribute("data-original-monto", montoOriginal);
+                } else {
+                    var montoOriginal = amountElement.getAttribute("data-original-monto");
+                    amountElement.innerHTML = montoOriginal;
+                    toggleButton.innerHTML = "Ocultar monto";
+                }
+            }
+        </script>
+    </section>
+
+{% endblock content %}
+
+

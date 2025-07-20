@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <section class="main">
+        <div class="main-top">
+            <h1>Registrar Contactos</h1>
+            <a href="{% url 'registrar_contacto' %}" class="create-account-button">Registrar Contacto</a>
+        </div>
+        <div class="main">
+            <div class="contact-list">
+                <h2>Contactos Registrados</h2>
+                <ul>
+                    {% for contacto in contactos %}
+                        <li>
+                            <strong>{{ contacto.numero_documento }}
+                                - {{ contacto.nombre }} {{ contacto.apellido }}</strong><br>
+                            Email: {{ contacto.email }}<br>
+                            <strong>Número de Cuenta:</strong> {{ contacto.nro_cuenta }}<br>
+                            <strong>Tipo de Cuenta:</strong> {{ contacto.tipo_cuenta }}<br>
+                            <strong>Tipo de Moneda:</strong> {{ contacto.moneda }}
+                            <form method="post" action="{% url 'eliminar-contacto' nro_cuenta=contacto.nro_cuenta %}" class="eliminar-form">
+                                {% csrf_token %}
+                                <input type="hidden" name="method" value="DELETE">
+                                <button type="submit">Eliminar Contacto</button>
+                            </form>
+                        </li>
+                        <br>
+                    {% empty %}
+                        <p>No tienes contactos registrados.</p>
+                        <a href="{% url 'registrar_contacto' %}">Registrar Contacto</a>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Manejar el envío del formulario
+            document.querySelectorAll('.eliminar-form').forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    event.preventDefault();
+
+                    // Realizar la solicitud AJAX para eliminar el contacto
+                    var formData = new FormData(form);
+                    fetch(form.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'X-CSRFToken': formData.get('csrfmiddlewaretoken'),
+                        },
+                    })
+                        .then(response => response.json())
+                        .then(data => {
+                            // Mostrar un mensaje de alerta basado en la respuesta
+                            if (data.success) {
+                                alert('Contacto eliminado exitosamente.');
+                                // Recargar la página o actualizar la lista de contactos de alguna manera
+                                location.reload();
+                            } else {
+                                alert('Error al eliminar el contacto: ' + data.error);
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Error al eliminar el contacto:', error);
+                        });
+                });
+            });
+        });
+    </script>
+{% endblock content %}

@@ -1,0 +1,47 @@
+{% extends 'base2.html' %}
+
+{% block content %}
+    <div class="section__container header__container">
+        <div class="header__content">
+            <h1>Contigo en todo momento</h1>
+            <h1>Tu Banco a toda hora</h1>
+            <p>
+                Para registrarte completa tus datos
+            </p>
+        </div>
+        <div class="header__form">
+            <form action="{% url 'registro' %}" method="post">
+                <h4>Comienza a organizarte con la ayuda del mejor Banco</h4>
+                {% csrf_token %}
+                {{ form.non_field_errors }}
+                <br>
+                <div class="form-group">
+                    {{ form.nombre }}
+                </div>
+                <div class="form-group">
+                    {{ form.apellido }}
+                </div>
+                <div class="form-group">
+                    {{ form.tipo_documento }}
+                </div>
+                <div class="form-group">
+                    {{ form.numero_documento }}
+                </div>
+                <div class="form-group">
+                    {{ form.ciudad_id }}
+                </div>
+                <div class="form-group">
+                    {{ form.direccion }}
+                </div>
+                <div class="form-group">
+                    {{ form.celular }}
+                </div>
+                <div class="form-group">
+                    {{ form.email }}
+                </div>
+                <br>
+                <button class="btn form__btn" type="submit">Registrarme</button>
+            </form>
+        </div>
+    </div>
+{% endblock content %}

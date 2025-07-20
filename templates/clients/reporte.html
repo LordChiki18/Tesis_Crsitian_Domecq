@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reporte de Movimientos</title>
+</head>
+<body>
+    <h1>Reporte de Movimientos</h1>
+    <p>Cuenta: {{ cuenta_id.titular }}</p>
+    <table border="1">
+        <tr>
+            <th>Fecha Movimiento</th>
+            <th>Tipo Movimiento</th>
+            <th>Monto Movimiento</th>
+            <th>Cuenta Origen</th>
+            <th>Cuenta Destino</th>
+        </tr>
+        {% for movimiento in movimientos %}
+        <tr>
+            <td>{{ movimiento.fecha_movimiento }}</td>
+            <td>{{ movimiento.get_tipo_movimiento_display }}</td>
+            <td>{{ movimiento.monto_movimiento }}</td>
+            <td>{{ movimiento.cuenta_origen }}</td>
+            <td>{{ movimiento.cuenta_destino }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles_dashboard.css' %}">
+    <link rel="icon" href="{% static 'main/media/favicon.ico' %}" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"/>
+    <title>Banco DOCAP</title>
+    <!-- Font Awesome Cdn Link -->
+    <script src="https://kit.fontawesome.com/818ed1e0c5.js" crossorigin="anonymous"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+</head>
+<body>
+<div class="container">
+    <nav class="sidebar">
+        <div class="logo">
+            <img src="{% static 'main/media/logo.png' %}" alt="Logo">
+            <span class="nav-item">Doca Banco</span>
+        </div>
+        <ul>
+            <li><a href="{% url 'cuentas_page' %}">
+                <i class="fas fa-wallet"></i>
+                <span class="nav-item">Mis Cuentas</span>
+            </a></li>
+            <li><a href="{% url 'contactos_page' %}">
+                <i class="fas fa-address-book"></i>
+                <span class="nav-item">Mis Contactos</span>
+            </a></li>
+            <li><a href="{% url 'transferencias_page' %}">
+                <i class="fas fa-money-bill-transfer"></i>
+                <span class="nav-item">Transferencias</span>
+            </a></li>
+            <li><a href="{% url 'deposito_page' %}">
+                <i class="fas fa-arrow-right"></i>
+                <span class="nav-item">Deposito</span>
+            </a></li>
+            <li><a href="{% url 'retiro_page' %}">
+                <i class="fas fa-arrow-left"></i>
+                <span class="nav-item">Retiro</span>
+            </a></li>
+            <li><a href="{% url 'movimientos_page' %}">
+                <i class="fas fa-money-bill-trend-up"></i>
+                <span class="nav-item">Movimientos</span>
+            </a></li>
+            <li><a href="{% url 'datos_page' %}">
+                <i class="fas fa-user"></i>
+                <span class="nav-item">Mis datos</span>
+            </a></li>
+            <li><a href="{% url 'cerrar_sesion' %}" class="logout">
+                <i class="fas fa-sign-out-alt"></i>
+                <span class="nav-item">Cerrar Sesión</span>
+            </a></li>
+        </ul>
+    </nav>
+    <section class="main">
+        <div class="users">
+            <div class="card_main">
+                <br>
+                <h4>
+                    Hola {{ persona.nombre }} {{ persona.apellido }}!
+                </h4>
+                <p>¿Cómo puede tu banco ayudarte hoy?</p>
+            </div>
+            <div class="main-skills">
+                {% block content %}
+                {% endblock content%}
+            </div>
+        </div>
+    </section>
+</div>
+</body>
+</html>

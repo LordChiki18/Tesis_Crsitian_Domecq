@@ -1,0 +1,686 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700");
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body{
+  background: #dfe9f5;
+}
+.container{
+  display: flex;
+}
+nav{
+  flex: 0 0 auto; 
+  display: block;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  left: 0;
+  background: #fff;
+  width: 280px;
+  overflow: hidden;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+.logo{
+  text-align: center;
+  display: flex;
+  margin: 10px 0 0 10px;
+}
+.logo img{
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+.logo span{
+  font-weight: bold;
+  padding-left: 15px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+a{
+  position: relative;
+  color: rgb(85, 83, 83);
+  font-size: 14px;
+  display: table;
+  width: auto;
+  padding: 10px;
+}
+nav .fas{
+  position: relative;
+  width: 70px;
+  height: 40px;
+  top: 14px;
+  font-size: 20px;
+  text-align: center;
+}
+.nav-item{
+  position: relative;
+  top: 12px;
+  margin-left: 10px;
+}
+a:hover{
+  color: #65c33b;
+}
+.logout{
+  position: absolute;
+  bottom: 0;
+}
+
+/* Mi cuenta */
+.main{
+  position: relative;
+  padding: 20px;
+  width: 100%;
+}
+.main-top{
+  display: flex;
+  width: 100%;
+}
+.main-top i{
+  position: absolute;
+  right: 0;
+  margin: 10px 30px;
+  color: rgb(110, 109, 109);
+  cursor: pointer;
+}
+.main-skills{
+  display: flex;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.main-skills .card{
+  width: 25%;
+  margin: 10px;
+  background: #fff;
+  text-align: center;
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+.main-skills .card h3{
+  margin: 10px;
+  text-transform: capitalize;
+}
+.main-skills .card p{
+  font-size: 12px;
+}
+.main-skills .card button{
+  background: orangered;
+  color: #fff;
+  padding: 7px 15px;
+  border-radius: 10px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+.main-skills .card button:hover{
+  background: rgba(223, 70, 15, 0.856);
+}
+.main-skills .card i{
+  font-size: 22px;
+  padding: 10px;
+}
+
+/* Tarjetas */
+.main-course{
+  margin-top:20px ;
+  margin-left: 10px;
+  text-transform: capitalize;
+}
+.course-box{
+  width: 39.8%;
+  height: 227px;
+  padding: 10px 10px 30px 10px;
+  margin-top: 10px;
+  background: #65c33b;
+  border-radius: 10px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+  margin-left: 10px;
+}
+.course-box ul{
+  list-style: none;
+  display: flex;
+}
+.course-box ul li{
+  margin: 10px;
+  color: gray;
+  cursor: pointer;
+}
+.course-box ul .active{
+  color: #000;
+  border-bottom: 2px solid #64c23a;
+}
+.course-box .course{
+  display: flex;
+}
+.box{
+  padding: 8px;
+  margin: 1px;
+  border-radius: 10px;
+  background: rgb(235, 233, 233);
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+  height: 205px;
+  width: 100%;
+}
+.box p{
+  font-size: 12px;
+  margin-top: 5px;
+}
+.box button{
+  color: #000000;
+  text-decoration: underline;
+  padding: 7px 10px;
+  border-radius: 10px;
+  margin-top: 6rem;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.box button:hover{
+  color: #64c23a;
+}
+.box i{
+  font-size: 4.7rem;
+  float: right;
+  margin-right: 10px;
+  margin-top: 60px;
+}
+.html{
+  color: rgb(25, 94, 54);
+}
+.css{
+  color: rgb(104, 179, 35);
+}
+.js{
+  color: rgb(28, 98, 179);
+}
+
+.users .card_main {
+  width: 99%;
+  margin: 10px;
+  background: #ffffff;
+  align-items: center; /* Centra los elementos horizontalmente */
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+.users .card_main img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+}
+
+.users .card_main h4 {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.users .card_main p {
+  font-size: 12px;
+  margin-bottom: 15px;
+  text-align: center; /* Alinea el párrafo al centro */
+}
+
+.users .card{
+  width: 32%;
+  margin: 10px;
+  background: #65c33b;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+.users .card img{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+.users .card h4{
+  text-transform: uppercase;
+}
+.users .card p{
+  font-size: 12px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+.users table{
+  margin:  auto;
+}
+.users .per span{
+  padding: 5px;
+  border-radius: 10px;
+  background: rgb(223, 223, 223);
+}
+.users td{
+  font-size: 14px;
+  padding-right: 15px;
+}
+.users .card button{
+  width: 50%;
+  margin-top: 8px;
+  padding: 7px;
+  cursor: pointer;
+  border-radius: 10px;
+  background: transparent;
+  border: 1px solid #ffffff;
+}
+.users .card button:hover{
+  background: #000;
+  color: #fff;
+  transition: 0.5s;
+}
+
+.underline-right {
+  text-decoration: underline;
+  text-align: right;
+  margin-right: 25px;
+}
+
+/*Movimientos */
+.history_lists{
+  justify-content: space-between;
+  
+}
+.row{
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+}
+table{
+  background: #fff;
+  padding: 1rem;
+  text-align: left;
+  border-radius: 10px;
+  width: 96%
+}
+table td, th{
+  padding: 0.2rem 0.8rem;
+}
+table th{
+  font-size: 15px;
+}
+table td{
+  font-size: 13px;
+  color: rgb(100, 100, 100);
+  
+}
+/* selector de cuentas */
+#selectAccountLabel {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+#selectAccount {
+  width: 18%;
+  padding: 1px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+#selectAccount:hover,
+#selectAccount:focus {
+  border-color: #65c33b;
+  box-shadow: 0 0 5px rgba(0, 255, 38, 0.5);
+}
+
+#id_tipo_cuenta {
+  width: 45%;
+  padding: 1px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+#id_tipo_cuenta:hover,
+#id_tipo_cuenta:focus {
+  border-color: #65c33b;
+  box-shadow: 0 0 5px rgba(0, 255, 38, 0.5);
+}
+
+
+#id_moneda {
+  width: 45%;
+  padding: 1px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+#id_moneda:hover,
+#id_moneda:focus {
+  border-color: #65c33b;
+  box-shadow: 0 0 5px rgba(0, 255, 38, 0.5);
+}
+
+#id_saldo {
+  width: 45%;
+  padding: 1px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+#id_saldo:hover,
+#id_saldo:focus {
+  border-color: #65c33b;
+  box-shadow: 0 0 5px rgba(0, 255, 38, 0.5);
+}
+
+#id_tipo_documento {
+  width: 45%;
+  padding: 1px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+#id_tipo_documento:hover,
+#id_tipo_documento:focus {
+  border-color: #65c33b;
+  box-shadow: 0 0 5px rgba(0, 255, 38, 0.5);
+}
+
+
+#id_numero_documento {
+  width: 45%;
+  padding: 1px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+#id_numero_documento:hover,
+#id_numero_documento:focus {
+  border-color: #65c33b;
+  box-shadow: 0 0 5px rgba(0, 255, 38, 0.5);
+}
+
+
+#id_email {
+  width: 45%;
+  padding: 1px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+#id_email:hover,
+#id_email:focus {
+  border-color: #65c33b;
+  box-shadow: 0 0 5px rgba(0, 255, 38, 0.5);
+}
+
+
+#id_nro_cuenta {
+  width: 45%;
+  padding: 1px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+#id_nro_cuenta:hover,
+#id_nro_cuenta:focus {
+  border-color: #65c33b;
+  box-shadow: 0 0 5px rgba(0, 255, 38, 0.5);
+}
+
+
+#id_nombre {
+  width: 45%;
+  padding: 1px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+#id_nombre:hover,
+#id_nombre:focus {
+  border-color: #65c33b;
+  box-shadow: 0 0 5px rgba(0, 255, 38, 0.5);
+}
+
+
+#id_apellido {
+  width: 45%;
+  padding: 1px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+#id_apellido:hover,
+#id_apellido:focus {
+  border-color: #65c33b;
+  box-shadow: 0 0 5px rgba(0, 255, 38, 0.5);
+}
+
+
+#nro_cuenta_origen {
+  width: 45%;
+  padding: 1px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+#nro_cuenta_origen:hover,
+#nro_cuenta_origen:focus {
+  border-color: #65c33b;
+  box-shadow: 0 0 5px rgba(0, 255, 38, 0.5);
+}
+
+
+
+#nro_cuenta_destino {
+  width: 45%;
+  padding: 1px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+#nro_cuenta_destino:hover,
+#nro_cuenta_destino:focus {
+  border-color: #65c33b;
+  box-shadow: 0 0 5px rgba(0, 255, 38, 0.5);
+}
+
+
+#monto {
+  width: 45%;
+  padding: 1px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+#monto:hover,
+#monto:focus {
+  border-color: #65c33b;
+  box-shadow: 0 0 5px rgba(0, 255, 38, 0.5);
+}
+
+#email {
+  width: 45%;
+  padding: 1px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+#email:hover,
+#email:focus {
+  border-color: #65c33b;
+  box-shadow: 0 0 5px rgba(0, 255, 38, 0.5);
+}
+
+
+#nombre {
+  width: 45%;
+  padding: 1px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+#nombre:hover,
+#nombre:focus {
+  border-color: #65c33b;
+  box-shadow: 0 0 5px rgba(0, 255, 38, 0.5);
+}
+
+
+#apellido {
+  width: 45%;
+  padding: 1px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+#apellido:hover,
+#apellido:focus {
+  border-color: #65c33b;
+  box-shadow: 0 0 5px rgba(0, 255, 38, 0.5);
+}
+
+
+#direccion {
+  width: 45%;
+  padding: 1px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+#direccion:hover,
+#direccion:focus {
+  border-color: #65c33b;
+  box-shadow: 0 0 5px rgba(0, 255, 38, 0.5);
+}
+
+
+#celular {
+  width: 45%;
+  padding: 1px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+#celular:hover,
+#celular:focus {
+  border-color: #65c33b;
+  box-shadow: 0 0 5px rgba(0, 255, 38, 0.5);
+}
+
+
+.create-account-button {
+  width: auto;
+  padding: 10px 20px; 
+  background-color: #1db52e; 
+  color: #fff; /* Color del texto */
+  text-decoration: none; /* Elimina el subrayado del enlace */
+  border: 1px solid #ffffff; /* Borde del botón */
+  border-radius: 10px; 
+  float: right;
+}
+
+.create-account-button:hover {
+  background-color: #ffffff; /* Cambia el color de fondo al pasar el mouse */
+  border: 1px solid #034d0f;
+}
+
+.main-no-account{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.main-btn {
+  text-align: left; /* Alinear el contenido a la izquierda */
+}
+
+.centered-text {
+  text-align: center;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+
+
+
+/* Estilos para el botón */
+.btns{
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid #273f26; /* Color del borde */
+  color: #ffffff; /* Color del texto */
+  background-color: transparent; /* Color de fondo */
+  border-radius: 5px; /* Radio de borde para esquinas redondeadas */
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Efecto de transición suave */
+}
+
+/* Estilo al pasar el ratón sobre el botón */
+.btns:hover {
+  background-color: #34db5e; /* Cambia el color de fondo al pasar el ratón */
+  color: #fff; /* Cambia el color del texto al pasar el ratón */
+  border-color: #fff; /* Cambia el color del borde al pasar el ratón */
+}
