@@ -2,7 +2,9 @@ services:
   - type: web
     name: Tesis_Crsitian_Domecq
     env: python
-    buildCommand: pip install -r requirements.txt
+    buildCommand: |
+      pip install -r requirements.txt
+      python manage.py collectstatic --noinput
     startCommand: gunicorn Tesis_Crsitian_Domecq.wsgi
     envVars:
       - key: DJANGO_SETTINGS_MODULE
