@@ -1,19 +1,17 @@
 {% extends 'base2.html' %}
 
 {% block content %}
-    <div class="section__container header__container">
-        <div class="header__content">
+    <section class="hero">
+        <div class="hero_section">
             <h1>Contigo en todo momento</h1>
-            <h1>Tu Banco a toda hora</h1>
-            <p>
-                Para registrarte completa tus datos
-            </p>
+            <h1>Electromecanica Parana</h1>
+            <p class="company-tagline">Para registrarte completa tus datos</p>
         </div>
-        <div class="header__form">
+        <div class="hero_form">
             <form action="{% url 'registro' %}" method="post">
-                <h4>Comienza a organizarte con la ayuda del mejor Banco</h4>
+                <h1>Registro</h1>
+                <p>Ingresa tus datos</p>
                 {% csrf_token %}
-                {{ form.non_field_errors }}
                 <br>
                 <div class="form-group">
                     {{ form.nombre }}
@@ -26,6 +24,7 @@
                 </div>
                 <div class="form-group">
                     {{ form.numero_documento }}
+                    {{ form.numero_documento.errors }}
                 </div>
                 <div class="form-group">
                     {{ form.ciudad_id }}
@@ -38,10 +37,11 @@
                 </div>
                 <div class="form-group">
                     {{ form.email }}
+                    {{ form.email.errors }}
                 </div>
                 <br>
                 <button class="btn form__btn" type="submit">Registrarme</button>
             </form>
         </div>
-    </div>
+    </section>
 {% endblock content %}

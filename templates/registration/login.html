@@ -1,25 +1,29 @@
 {% extends 'base2.html' %}
 {% block content %}
-    <div class="section__container header__container">
-        <div class="header__content">
-            <h1>Contigo en todo momento</h1>
-            <h1>Tu Banco a toda hora</h1>
+    <section class="hero">
+        <div class="hero_section">
+            <h1>Bienvenido a</h1>
+            <h1>ELECTROMECÁNICA PARANÁ</h1>
+            <p class="company-tagline">Tu socio confiable en soluciones electromecánicas</p>
         </div>
-        <div class="header__form">
+        <div class="hero_form">
             <form action="{% url 'iniciar_sesion' %}" method="post">
-                <h4>Tu Online Banking</h4>
-                <p> Para iniciar sesion ingresa tus datos</p>
+                <h1>Iniciar Sesión</h1>
+                <p>Ingresa tus credenciales para acceder</p>
                 {% csrf_token %}
-                <input type="text" id="username" placeholder="Usuario" name="username" required>
-                <br>
-                <input type="password" id="password" placeholder="Contraseña" name="password" required>
-                <br>
-                <label>
-                    {{ error_message }}
-                </label>
-                <br>
-                <button class="btn form__btn" type="submit">Iniciar Sesion</button>
+                <div class="form-group">
+                    <input type="text" id="username" placeholder="Nombre de usuario" name="username" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="password" id="password" placeholder="Contraseña" name="password" required>
+                </div>
+
+                {{ error_message }}
+
+                <button class="btn form__btn" type="submit">Iniciar Sesión</button>
             </form>
         </div>
+    </section>
     </div>
 {% endblock content %}

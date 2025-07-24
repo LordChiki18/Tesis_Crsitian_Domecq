@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <section class="main">
+        <div class="main-top">
+            <h1>Mis Equipos</h1>
+            <a href="{% url 'registro_equipo' %}" class="create-account-button">Crear Equipo</a>
+        </div>
+        <div class="main-skills">
+            {% if equipo %}
+                <div class="card">
+                    <h1 style="text-align: center">Datos del Equipo</h1>
+                    <p>Tipo de Equipo: {{ equipo.tipo_equipo }}</p>
+                    <p>Marca: {{ equipo.marca }}</p>
+                    <p>Modelo: {{ equipo.modelo }}</p>
+                    <p>Potencia: {{ equipo.potencia_hp_kw }}</p>
+                    <p>Voltaje: {{ equipo.voltaje }}</p>
+                    <p>rpm: {{ equipo.rpm }}</p>
+                    <p>fase: {{ equipo.fase }}</p>
+                    <p>Equipo creado el: {{ equipo.fecha_creacion }}</p>
+                    <p>Modificado el: {{ equipo.fecha_modificacion }}</p>
+
+                </div>
+                <div class="card">
+                    <h1 style="text-align: center">Estado del Equipo</h1>
+                    <p>Inconveniente del Equipo: {{ equipo.descripcion_falla }}</p>
+                    <p>Diagnostico del equipo:
+                        {% if equipo.diagnostico == "" %}
+                            No disponible
+                        {% else %}
+                            {{ equipo.diagnostico }}
+                        {% endif %}
+                    </p>
+                    <p>Fecha de Diagnostico:
+                        {% if equipo.fecha_diagnostico == None %}
+                            No disponible
+                        {% else %}
+                            {{ equipo.fecha_diagnostico }}
+                        {% endif %}
+                    </p>
+                    <p>Solucion:
+                        {% if equipo.solucion == "" %}
+                            No disponible
+                        {% else %}
+                            {{ equipo.solucion }}
+                        {% endif %}
+                    </p>
+                </div>
+                {% if orden %}
+                    <div class="card">
+                        <h2 style="text-align: center">Órdenes de trabajo asociadas</h2>
+                        {% for o in orden %}
+                            <div style="margin-bottom: 1rem; border-bottom: 1px solid #ccc; padding-bottom: 1rem;">
+                                <p><strong>Código:</strong> {{ o.cod_trabajo }}</p>
+                                <p><strong>Fecha de ingreso:</strong> {{ o.fecha_ingreso }}</p>
+                                <p><strong>Estado actual:</strong> {{ o.estado }}</p>
+                                <p><strong>Fecha estimada de Entrega:</strong>
+                                    {% if equipo.diagnostico == "" and equipo.fecha_diagnostico == None %}
+                                        No disponible
+                                    {% else %}
+                                        {{ o.fecha_entrega_estimada }}
+                                    {% endif %}
+                                </p>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    <p>No hay órdenes asociadas.</p>
+                {% endif %}
+                </div>
+            {% endif %}
+    </section>
+{% endblock content %}

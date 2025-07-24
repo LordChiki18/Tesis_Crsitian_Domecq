@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <section class="main">
+        <div class="main-top">
+            <h1>Registrar Equipo</h1>
+            <a href="{% url 'listar_equipos' %}" class="button-form">Mis Equipos</a>
+        </div>
+        <div class="main">
+            <div class="main-skills-contactos">
+                <div class="card">
+                <form method="post" action="{% if editar %}{% url 'editar_equipo' equipo.equipo_id %}{% else %}{% url 'registro_equipo' %}{% endif %}">
+                        <h4>Ingrese los datos del equipo a registrar</h4>
+                        {% csrf_token %}
+                        {{ form.non_field_errors }}
+                        <br>
+
+                        <div class="form-group">
+                            <p>Tipo de equipo</p>
+                            {{ form.tipo_equipo }}
+                        </div>
+                        <div class="form-group">
+                            <p>Marca</p>
+                            {{ form.marca }}
+                        </div>
+                        <div class="form-group">
+                            <p>Modelo</p>
+                            {{ form.modelo }}
+                        </div>
+                        <div class="form-group">
+                            <p>Descripción de la falla</p>
+                            {{ form.descripcion_falla }}
+                        </div>
+                        <div class="form-group">
+                            <p>Potencia (HP o kW)</p>
+                            {{ form.potencia_hp_kw }}
+                        </div>
+                        <div class="form-group">
+                            <p>Voltaje</p>
+                            {{ form.voltaje }}
+                        </div>
+                        <div class="form-group">
+                            <p>RPM</p>
+                            {{ form.rpm }}
+                        </div>
+                        <div class="form-group">
+                            <p>Fase</p>
+                            {{ form.fase }}
+                        </div>
+
+                        <br>
+                        {{ error_message }}
+                        <button class="btn form__btn" type="submit">{% if editar %}Editar{% else %}Registrar{% endif %}</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+{% endblock content %}

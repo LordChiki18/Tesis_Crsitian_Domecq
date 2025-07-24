@@ -24,3 +24,15 @@ class RegistroForm(forms.ModelForm):
         model = Persona
         fields = (
             'ciudad_id', 'nombre', 'apellido', 'tipo_documento', 'numero_documento', 'direccion', 'celular', 'email')
+
+    def clean_email(self):
+        email = self.cleaned_data['email']
+        if Persona.objects.filter(email=email).exists():
+            raise forms.ValidationError("Ya existe una cuenta con ese correo electrónico.")
+        return email
+
+    def clean_ci(self):
+        ci = self.cleaned_data['numero_documento']
+        if Persona.objects.filter(numero_documento=ci).exists():
+            raise forms.ValidationError("Ya existe una cuenta con ese Nro. De Documento.")
+        return ci

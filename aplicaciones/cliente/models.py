@@ -107,7 +107,6 @@ class Ciudad(models.Model):
     def __str__(self):
         return f"{self.ciudad} - {self.departamento}"
 
-
 class PersonaManager(BaseUserManager):
     def create_user(self, email, password=None, **extra_fields):
         if not email:
@@ -122,7 +121,6 @@ class PersonaManager(BaseUserManager):
         extra_fields.setdefault('is_staff', True)
         extra_fields.setdefault('is_superuser', True)
         return self.create_user(email, password, **extra_fields)
-
 
 # Modelo de usuario normal (Persona)
 class Persona(AbstractBaseUser, PermissionsMixin):
@@ -179,7 +177,6 @@ class Persona(AbstractBaseUser, PermissionsMixin):
             self.custom_username = f"{self.nombre[0]}{self.numero_documento}"
         super().save(*args, **kwargs)
 
-
 @receiver(post_save, sender=Persona)
 def crear_cliente(sender, instance, created, **kwargs):
     if created:
@@ -212,104 +209,3 @@ class Cliente(models.Model):
 
     def __str__(self):
         return f"{self.persona_id}"
-
-
-# esta es la supuesta relacion
-class RelacionCliente(models.Model):
-    cliente_propietario = models.ForeignKey(Cliente, on_delete=models.CASCADE, related_name='relaciones_propietario')
-    cliente_registrado = models.ForeignKey(Cliente, on_delete=models.CASCADE, related_name='relaciones_registrado')
-    email = models.EmailField()
-    nro_cuenta = models.PositiveIntegerField(unique=True)
-    tipo_cuenta = models.CharField(choices=(
-        ('Cuenta Corriente', 'Cuenta Corriente'),
-        ('Cuenta de Ahorro', 'Cuenta de Ahorro'),
-    ))
-    moneda = models.CharField(choices=(
-        ('Gs', 'Guaraní'),
-        ('USD', 'Dolares_Americanos'),
-    ))
-    nombre = models.CharField(max_length=255)
-    apellido = models.CharField(max_length=255)
-    tipo_documento = models.CharField(choices=(
-        ('Pasaporte', 'Pasaporte'),
-        ('RUC', 'RUC'),
-        ('CI', 'CI'),
-    ))
-    numero_documento = models.CharField(max_length=255)
-
-
-# Modelo para la tabla CUENTAS
-def generate_unique_number(length):
-    # Genera un número aleatorio de la longitud especificada
-    while True:
-        number = random.randint(10 ** (length - 1), 10 ** length - 1)
-        if not Cuentas.objects.filter(nro_cuenta=number).exists():
-            return number
-
-
-def generate_unique_contract_number():
-    # Genera un número de contrato aleatorio
-    while True:
-        number = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(10))
-        if not Cuentas.objects.filter(nro_contrato=number).exists():
-            return number
-
-
-class Cuentas(models.Model):
-    cuenta_id = models.AutoField(primary_key=True)
-    cliente_id = models.ForeignKey(Cliente, on_delete=models.CASCADE)
-    nro_cuenta = models.PositiveIntegerField(unique=True, editable=False, blank=True)
-    nro_contrato = models.CharField(max_length=255, unique=True, editable=False, blank=True)
-
-    def save(self, *args, **kwargs):
-        if not self.nro_cuenta:
-            self.nro_cuenta = generate_unique_number(8)  # Genera un número de 8 dígitos
-        if not self.nro_contrato:
-            self.nro_contrato = generate_unique_contract_number()  # Genera numero de contrato
-        super(Cuentas, self).save(*args, **kwargs)
-
-    fecha_alta = models.DateTimeField(auto_now_add=True)
-    tipo_cuenta = models.CharField(choices=(
-        ('Cuenta Corriente', 'Cuenta Corriente'),
-        ('Cuenta de Ahorro', 'Cuenta de Ahorro'),
-    ))
-    estado = models.CharField(choices=(
-        ('Activa', 'Activa'),
-        ('Inactiva', 'Inactiva'),
-        ('Bloqueada', 'Bloqueada'),
-        ('Cerrada', 'Cerrada'),
-        ('Pendiente de aprobación', 'Pendiente de aprobación'),
-        ('Suspendida', 'Suspendida'),
-        ('En revisión', 'En revisión'),
-        ('En mora', 'En mora'),
-    ), default='Activa')
-    saldo = models.DecimalField(max_digits=10, decimal_places=2)
-    costo_mantenimiento = models.DecimalField(max_digits=10, decimal_places=2, default=0)
-    promedio_acreditacion = models.DecimalField(max_digits=10, decimal_places=2, default=0)
-    moneda = models.CharField(choices=(
-        ('Gs', 'Guaraní'),
-        ('USD', 'Dolares_Americanos'),
-    ))
-
-    def __str__(self):
-        return f"{self.nro_cuenta}"
-
-
-# Modelo para la tabla MOVIMIENTOS
-class Movimientos(models.Model):
-    movimiento_id = models.AutoField(primary_key=True)
-    cuenta_id = models.ForeignKey(Cuentas, on_delete=models.CASCADE)
-    fecha_movimiento = models.DateTimeField(auto_now_add=True)
-    tipo_movimiento = models.CharField(choices=(
-        ('Crédito', 'Crédito'),
-        ('Débito', 'Débito'),
-    ))
-    saldo_anterior = models.DecimalField(max_digits=10, decimal_places=2)
-    saldo_actual = models.DecimalField(max_digits=10, decimal_places=2)
-    monto_movimiento = models.DecimalField(max_digits=10, decimal_places=2)
-    cuenta_origen = models.DecimalField(max_digits=10, decimal_places=2)
-    cuenta_destino = models.DecimalField(max_digits=10, decimal_places=2)
-    canal = models.CharField(choices=(
-        ('App', 'Aplicacion'),
-        ('Web', 'Pagina'),
-    ), default='Web')

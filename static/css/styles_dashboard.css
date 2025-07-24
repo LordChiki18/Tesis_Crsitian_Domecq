@@ -15,15 +15,15 @@ body{
   display: flex;
 }
 nav{
-  flex: 0 0 auto; 
+  flex: 0 0 auto;
   display: block;
   position: relative;
   top: 0;
   bottom: 0;
-  height: 100vh;
   left: 0;
   background: #fff;
   width: 280px;
+  height: 100vh;
   overflow: hidden;
   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
 }
@@ -99,7 +99,7 @@ a:hover{
   width: 25%;
   margin: 10px;
   background: #fff;
-  text-align: center;
+  text-align: left;
   border-radius: 20px;
   padding: 10px;
   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
@@ -204,7 +204,6 @@ a:hover{
   width: 99%;
   margin: 10px;
   background: #ffffff;
-  align-items: center; /* Centra los elementos horizontalmente */
   border-radius: 10px;
   padding: 10px;
   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
@@ -224,14 +223,14 @@ a:hover{
 .users .card_main p {
   font-size: 12px;
   margin-bottom: 15px;
-  text-align: center; /* Alinea el párrafo al centro */
+  text-align: left; /* Alinea el párrafo al centro */
 }
 
 .users .card{
   width: 32%;
   margin: 10px;
-  background: #65c33b;
-  text-align: center;
+  background: #ffffff;
+  text-align: left;
   border-radius: 10px;
   padding: 10px;
   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
@@ -285,7 +284,7 @@ a:hover{
 /*Movimientos */
 .history_lists{
   justify-content: space-between;
-  
+
 }
 .row{
   display: flex;
@@ -308,7 +307,7 @@ table th{
 table td{
   font-size: 13px;
   color: rgb(100, 100, 100);
-  
+
 }
 /* selector de cuentas */
 #selectAccountLabel {
@@ -621,12 +620,12 @@ table td{
 
 .create-account-button {
   width: auto;
-  padding: 10px 20px; 
-  background-color: #1db52e; 
+  padding: 10px 20px;
+  background-color: #1db52e;
   color: #fff; /* Color del texto */
   text-decoration: none; /* Elimina el subrayado del enlace */
   border: 1px solid #ffffff; /* Borde del botón */
-  border-radius: 10px; 
+  border-radius: 10px;
   float: right;
 }
 
@@ -683,4 +682,53 @@ table td{
   background-color: #34db5e; /* Cambia el color de fondo al pasar el ratón */
   color: #fff; /* Cambia el color del texto al pasar el ratón */
   border-color: #fff; /* Cambia el color del borde al pasar el ratón */
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.pagination-left,
+.pagination-center{
+  flex: 1;
+  text-align: center;
+}
+
+.pagination-left {
+  text-align: left;
+}
+
+.pagination-right .pagination-links {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    flex-wrap: wrap; /* por si es necesario en pantallas pequeñas */
+}
+
+.pagination-right a {
+    text-decoration: none;
+    padding: 6px 12px;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    color: #007bff;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.pagination-right a:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.pagination a {
+  margin: 0 5px;
+  text-decoration: none;
+  color: #007bff;
+}
+
+.pagination a:hover {
+  text-decoration: underline;
 }

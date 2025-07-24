@@ -2,6 +2,8 @@ import secrets
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.core.mail import send_mail
+
+from aplicaciones.cliente.models import Persona
 from aplicaciones.cuentas.forms import RegistroForm
 import string
 
@@ -34,34 +36,39 @@ def registro_usuario(request):
     if request.method == 'POST':
         form = RegistroForm(request.POST)
         if form.is_valid():
-            print("Formulario válido")
-            user = form.save(commit=False)  # No guardes el usuario en la base de datos todavía
-            user.is_staff = False
-            user.is_superuser = False
-            generated_password = generate_secure_password()  # Genera una contraseña aleatoria
-            user.set_password(generated_password)  # Configura la contraseña generada
-            user.save()  # Ahora guarda el usuario en la base de datos
-            login(request, user)
-            print("Usuario guardado en la base de datos")
-
-            # Obtén los datos del usuario
-            nombre = form.cleaned_data.get('nombre')
-            apellido = form.cleaned_data.get('apellido')
+            ci = form.cleaned_data.get('numero_documento')
             email = form.cleaned_data.get('email')
 
+            if Persona.objects.filter(numero_documento=ci).exists():
+                form.add_error('Numero de Documento', 'Ya existe una cuenta con ese numero de documento')
+            elif Persona.objects.filter(email=email).exists():
+                form.add_error('Email', 'Ya existe una cuenta con ese email')
+            else:
+                user = form.save(commit=False)  # No guardes el usuario en la base de datos todavía
+                user.is_staff = False
+                user.is_superuser = False
+                generated_password = generate_secure_password()  # Genera una contraseña aleatoria
+                user.set_password(generated_password)  # Configura la contraseña generada
+                user.save()  # Ahora guarda el usuario en la base de datos
+                login(request, user)
+
+            # Obtén los datos del usuario
+                nombre = form.cleaned_data.get('nombre')
+                apellido = form.cleaned_data.get('apellido')
+                email = form.cleaned_data.get('email')
+
             # Envía el correo electrónico
-            subject = 'Registro exitoso'
-            message = (f'Hola, {nombre} {apellido}!\nTe hemos registrado satisfactoriamente.'
+                subject = 'Registro exitoso'
+                message = (f'Hola, {nombre} {apellido}!\nTe hemos registrado satisfactoriamente.'
                        f'\nTu id de sesion es tu CI: {user.custom_username}'
                        f'\nTu contraseña generica es: {generated_password}')
 
-            enviar_correo(email, subject, message)
+                enviar_correo(email, subject, message)
 
-            return redirect('inicio')
+                return redirect('login')
     else:
         form = RegistroForm()
     return render(request, 'registration/registro.html', {'form': form})
-
 
 def iniciar_sesion(request):
     if request.method == 'POST':
@@ -72,7 +79,7 @@ def iniciar_sesion(request):
 
         if user is not None and user.check_password(password):
             login(request, user)
-            return redirect('cuentas_page')  # Redirige al usuario a la vista de cuentas
+            return redirect('inicio')  # Redirige al usuario a la vista de cuentas
 
         else:
             error_message = "Usuario o contraseña incorrectos"

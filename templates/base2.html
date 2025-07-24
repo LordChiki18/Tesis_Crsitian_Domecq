@@ -7,41 +7,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
     <link rel="icon" href="{% static 'main/media/favicon.ico' %}" type="image/x-icon">
-    <link
-            href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"/>
     <script src="{% static 'js/script.js' %}"></script>
-    <title>Banco DOCAP</title>
-  </head>
-  <body>
-    <header>
-      <nav class="sectionh__container navh__container">
-        <div class="nav__logo" onclick="redirigirAInicio()"><img src="{% static 'main/media/logo.png' %}" alt="Logo"></div>
-        <div class="nav__logo" onclick="redirigirAInicio()">Banco DOCAP</div>
+    <title>Electromecanica Parana</title>
+</head>
+<body>
+<header>
+    <nav class="sectionh__container navh__container">
+        <div class="nav__logo" onclick="redirigirAInicio()">
+            <img src="{% static 'main/media/ep_logo.png' %}" alt="Logo">
+            <span>Electromecanica Parana</span>
+        </div>
         <ul class="nav__links">
-            <li class="link"><a href="{% url 'cuentas_desc' %}">Cuentas</a></li>
+            <li class="link"><a href="{% url 'cuentas_desc' %}">Cotizaciones</a></li>
             <li class="link"><a href="{% url 'about_desc' %}">Sobre Nosotros</a></li>
             <li class="link"><a href="{% url 'contact_desc' %}">Contacto</a></li>
         </ul>
-        <a href={% url 'iniciar_sesion' %}>
-            <button class="btncli">Online Banking</button>
-            </a>
-            <a href={% url 'registro' %}>
-                <button class="btn">Quiero ser Cliente</button>
-            </a>
+        <div class="nav__actions">
+            {% if user.is_authenticated %}
+                <a href="{% url 'datos_page' %}">
+                    <button class="btn_2">Mi Perfil</button>
+                </a>
+                <a href="{% url 'cerrar_sesion' %}">
+                    <button class="btn">Cerrar Sesión</button>
+                </a>
+            {% else %}
+                <a href="{% url 'iniciar_sesion' %}">
+                    <button class="btn_2">Iniciar Sesión</button>
+                </a>
+                <a href="{% url 'registro' %}">
+                    <button class="btn">Crear Cuenta</button>
+                </a>
+            {% endif %}
+        </div>
     </nav>
-    {% block content %}
-
-    {% endblock content %}
 </header>
+<main class="main">
+    {% block content %}
+    {% endblock content %}
+</main>
 <footer class="footer">
     <div class="footer__bar">
         <div class="footer__bar__content">
-            <h3 style="color: white;">Contigo en todo momento</h3>
+            <h3>Tus soluciones al momento</h3>
             <div class="footer__socials">
                 <a href="{% url 'contact_desc' %}">Contacto</a>
-                <a href="{% url 'politicas_desc' %}">Politica</a>
-                <a href="{% url 'terminos_desc' %}">Terminos</a>
+                <a href="{% url 'politicas_desc' %}">Política</a>
+                <a href="{% url 'terminos_desc' %}">Términos</a>
             </div>
         </div>
     </div>

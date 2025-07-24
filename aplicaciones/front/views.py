@@ -7,7 +7,7 @@ def index(request):
 
 
 def nav_cuentas(request):
-    return render(request, 'pages/cuentas_desc.html')
+    return render(request, 'pages/cotizaciones.html')
 
 
 def nav_about(request):

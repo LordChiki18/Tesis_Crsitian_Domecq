@@ -1,31 +1,70 @@
 {% extends 'base2.html' %}
 
 {% block content %}
-    <div class="section__container header__container">
-        <div class="header__content">
-            <h1>Contacto</h1>
-            <p><strong>Información de Contacto del Banco</strong></p>
+    <section class="hero hero-option1">
+        <div>
+            <h1>📞 Contacto</h1>
+            <p><strong>Información de Contacto de Electromecánica Paraná</strong></p>
 
-            <p><strong>Dirección:</strong><br>
-                123 Calle Principal, Ciudad Capital<br>
-                Código Postal: 12345<br>
-                País: Paraguay
-            </p>
+            <div class="contact-item">
+                <div class="contact-icon">📍</div>
+                <div class="contact-content">
+                    <strong>Dirección:</strong><br>
+                    Avda. Fernando de la Mora N° 2997 c/ Ybapuru<br>
+                    Asunción - Paraguay<br>
+                    <hr>
+                    <a href="https://maps.app.goo.gl/bi8dN673ubEJshHa7" target="_blank">Ir a la Ubicacion</a>
+                    <div id="map" style="width: 100%; height: 300px; margin-top: 10px;"></div>
 
-            <p><strong>Teléfono de Atención al Cliente:</strong><br>
-                +1 (800) 123-4567
-            </p>
+                </div>
+            </div>
 
-            <p><strong>Correo Electrónico de Atención al Cliente:</strong><br>
-                <a href="mailto:info@bancodacop.com" style="color: aliceblue;">info@bancodacop.com</a>
-            </p>
+            <div class="contact-item">
+                <div class="contact-icon">📱</div>
+                <div class="contact-content">
+                    <strong>Teléfono de Atención al Cliente:</strong><br>
+                    +595 (982) 797-314
+                </div>
+            </div>
 
-            <p><strong>Horario de Atención al Cliente:</strong><br>
-                Lunes a Viernes: 9:00 AM - 5:00 PM<br>
-                Sábados: 9:00 AM - 1:00 PM<br>
-                Domingos: Cerrado
-            </p>
+            <div class="contact-item">
+                <div class="contact-icon">✉️</div>
+                <div class="contact-content">
+                    <strong>Correo Electrónico:</strong><br>
+                    <a href="mailto:electromecanicaparana@gmail.com">electromecanicaparana@gmail.com</a>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-icon">🕒</div>
+                <div class="contact-content">
+                    <strong>Horario de Atención:</strong><br>
+                    Lunes a Viernes: 07:00 AM - 16:00 PM<br>
+                    Sábados: Cerrado<br>
+                    Domingos: Cerrado
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
+    <script>
+        function initMap() {
+            const ubicacion = {lat: -25.332751, lng: -57.590936};
+            const mapa = new google.maps.Map(document.getElementById("map"), {
+                zoom: 14,
+                center: ubicacion,
+            });
+
+            new google.maps.Marker({
+                position: ubicacion,
+                map: mapa,
+                title: "¡Estamos aquí!",
+            });
+        }
+    </script>
+
+    <script async
+            src="https://maps.googleapis.com/maps/api/js?AIzaSyB6U1hsQEDO8lew1TzMucq1TuvZh3iq6B0&callback=initMap">
+    </script>
+
 
 {% endblock content %}

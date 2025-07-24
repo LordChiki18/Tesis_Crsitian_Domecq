@@ -4,14 +4,71 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af25b3b7-91e0-4a9d-9baa-edcc0fa0bd78" name="Changes" comment="Primer commit">
+    <list default="true" id="af25b3b7-91e0-4a9d-9baa-edcc0fa0bd78" name="Changes" comment="Primer commit ajuste">
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aplicaciones/ordenes/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/aplicaciones/ordenes/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/main/media/ep_logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/ordenes/equipo_Form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/ordenes/lista_equipo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/ordenes/lista_orden.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/ordenes/orden_crear.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/ordenes/ver_equipo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Tesis_Crsitian_Domecq.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Tesis_Crsitian_Domecq.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/59665b78-a7fa-4304-bc4f-a72c07423fd3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/59665b78-a7fa-4304-bc4f-a72c07423fd3/storage_v2/_src_/schema/main.uQUzAA.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tesis_Crsitian_Domecq/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tesis_Crsitian_Domecq/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tesis_Crsitian_Domecq/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tesis_Crsitian_Domecq/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aplicaciones/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/aplicaciones/api/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aplicaciones/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/aplicaciones/api/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aplicaciones/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/aplicaciones/api/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aplicaciones/cliente/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/aplicaciones/cliente/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aplicaciones/cliente/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/aplicaciones/cliente/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aplicaciones/cliente/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/aplicaciones/cliente/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aplicaciones/cliente/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/aplicaciones/cliente/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aplicaciones/cuentas/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/aplicaciones/cuentas/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aplicaciones/cuentas/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/aplicaciones/cuentas/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/aplicaciones/front/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/aplicaciones/front/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/styles_dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/styles_dashboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/media/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/static/main/media/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/main/media/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/clients/contactos.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/clients/cuentas.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/clients/datos.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/clients/datos.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/clients/deposito.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/clients/movimientos.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/clients/reporte.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/clients/retiro.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/clients/transferencias.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pages/cuentas_desc.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/cotizaciones.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration/registro.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/registro.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration/registro_contacto.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration/registro_cuentas.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -36,32 +93,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Django Server.Tesis_Crsitian_Domecq.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
-    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR_AND_PREVIEW&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/domec/PycharmProjects/Tesis_Crsitian_Domecq&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Django Server.Tesis_Crsitian_Domecq.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "django.template.preview.state": "SHOW_EDITOR",
+    "git-widget-placeholder": "master",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "C:/Users/domec/PycharmProjects/Tesis_Crsitian_Domecq/static/main/media",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\domec\PycharmProjects\Tesis_Crsitian_Domecq\static\main\media" />
       <recent name="C:\Users\domec\PycharmProjects\Tesis_Crsitian_Domecq" />
       <recent name="C:\Users\domec\PycharmProjects\Tesis_Crsitian_Domecq\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\domec\PycharmProjects\Tesis_Crsitian_Domecq\aplicaciones" />
       <recent name="C:\Users\domec\PycharmProjects\Tesis_Crsitian_Domecq\templates" />
     </key>
   </component>
@@ -108,7 +170,11 @@
       <option name="presentableId" value="Default" />
       <updated>1752972466667</updated>
       <workItem from="1752972467722" duration="2130000" />
-      <workItem from="1752975493003" duration="73000" />
+      <workItem from="1752975493003" duration="91000" />
+      <workItem from="1752975943118" duration="852000" />
+      <workItem from="1753144921014" duration="23612000" />
+      <workItem from="1753279109115" duration="973000" />
+      <workItem from="1753295831527" duration="26373000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit">
       <option name="closed" value="true" />
@@ -126,7 +192,39 @@
       <option name="project" value="LOCAL" />
       <updated>1752974236934</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Primer commit ajuste">
+      <option name="closed" value="true" />
+      <created>1752975574608</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1752975574608</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Primer commit ajuste">
+      <option name="closed" value="true" />
+      <created>1752975970004</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1752975970004</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Primer commit ajuste">
+      <option name="closed" value="true" />
+      <created>1752976225956</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1752976225956</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Primer commit ajuste">
+      <option name="closed" value="true" />
+      <created>1752976796507</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1752976796507</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,6 +232,33 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Primer commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Primer commit" />
+    <MESSAGE value="Primer commit ajuste" />
+    <option name="LAST_COMMIT_MESSAGE" value="Primer commit ajuste" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/aplicaciones/ordenes/models.py</url>
+          <line>150</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/aplicaciones/cliente/models.py</url>
+          <line>189</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/aplicaciones/ordenes/models.py</url>
+          <line>82</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/aplicaciones/ordenes/models.py</url>
+          <line>6</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

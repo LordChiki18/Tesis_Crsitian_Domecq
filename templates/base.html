@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/styles_dashboard.css' %}">
     <link rel="icon" href="{% static 'main/media/favicon.ico' %}" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"/>
-    <title>Banco DOCAP</title>
+    <title>Electromecanica Parana</title>
     <!-- Font Awesome Cdn Link -->
     <script src="https://kit.fontawesome.com/818ed1e0c5.js" crossorigin="anonymous"></script>
     <script src="{% static 'js/script.js' %}"></script>
@@ -17,34 +17,35 @@
 <div class="container">
     <nav class="sidebar">
         <div class="logo">
-            <img src="{% static 'main/media/logo.png' %}" alt="Logo">
-            <span class="nav-item">Doca Banco</span>
+            <img src="{% static 'main/media/ep_logo.png' %}" alt="Logo">
+            <span class="nav-item">Electromecanica Parana</span>
         </div>
         <ul>
-            <li><a href="{% url 'cuentas_page' %}">
-                <i class="fas fa-wallet"></i>
-                <span class="nav-item">Mis Cuentas</span>
+            <li><a href="{% url 'listar_ordenes' %}">
+                <i class="fas fa-folder"></i>
+                <span class="nav-item">Mis Ordenes</span>
             </a></li>
-            <li><a href="{% url 'contactos_page' %}">
-                <i class="fas fa-address-book"></i>
-                <span class="nav-item">Mis Contactos</span>
+            <li><a href="{% url 'listar_equipos' %}">
+                <i class="fas fa-bolt"></i>
+                <span class="nav-item">Mis Equipos</span>
             </a></li>
-            <li><a href="{% url 'transferencias_page' %}">
-                <i class="fas fa-money-bill-transfer"></i>
-                <span class="nav-item">Transferencias</span>
-            </a></li>
-            <li><a href="{% url 'deposito_page' %}">
-                <i class="fas fa-arrow-right"></i>
-                <span class="nav-item">Deposito</span>
-            </a></li>
-            <li><a href="{% url 'retiro_page' %}">
-                <i class="fas fa-arrow-left"></i>
-                <span class="nav-item">Retiro</span>
-            </a></li>
-            <li><a href="{% url 'movimientos_page' %}">
-                <i class="fas fa-money-bill-trend-up"></i>
-                <span class="nav-item">Movimientos</span>
-            </a></li>
+
+            {#            <li><a href="{% url 'transferencias_page' %}">#}
+            {#                <i class="fas fa-money-bill-transfer"></i>#}
+            {#                <span class="nav-item">Transferencias</span>#}
+            {#            </a></li>#}
+            {#            <li><a href="{% url 'deposito_page' %}">#}
+            {#                <i class="fas fa-arrow-right"></i>#}
+            {#                <span class="nav-item">Deposito</span>#}
+            {#            </a></li>#}
+            {#            <li><a href="{% url 'retiro_page' %}">#}
+            {#                <i class="fas fa-arrow-left"></i>#}
+            {#                <span class="nav-item">Retiro</span>#}
+            {#            </a></li>#}
+            {#            <li><a href="{% url 'movimientos_page' %}">#}
+            {#                <i class="fas fa-money-bill-trend-up"></i>#}
+            {#                <span class="nav-item">Movimientos</span>#}
+            {#            </a></li>#}
             <li><a href="{% url 'datos_page' %}">
                 <i class="fas fa-user"></i>
                 <span class="nav-item">Mis datos</span>
@@ -66,7 +67,7 @@
             </div>
             <div class="main-skills">
                 {% block content %}
-                {% endblock content%}
+                {% endblock content %}
             </div>
         </div>
     </section>

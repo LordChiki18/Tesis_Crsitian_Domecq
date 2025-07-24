@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <section class="main">
+        <div class="main-top">
+            <h1>Mis Ordenes</h1>
+            <a href="{% url 'crear_orden' %}" class="create-account-button">Crear Orden</a>
+        </div>
+        <div class="main-skills">
+            {% if ordenes %}
+                    <table>
+                        <tr>
+                            <th>Orden Nro</th>
+                            <th>Ingreso</th>
+                            <th>Estado</th>
+                            <th>Cantidad de Equipos</th>
+                            <th>Opciones</th>
+                        </tr>
+                        {% for orden in ordenes %}
+                            <tr>
+                                <td>{{ orden.cod_trabajo }}</td>
+                                <td>{{ orden.fecha_ingreso }}</td>
+                                <td>{{ orden.estado }}</td>
+                                <td>{{ orden.orden_equipos.count }}</td>
+                                <td>
+                                    <a>Ver</a>
+                                    <a>Editar</a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                    </div>
+            {% else %}
+                <p>No tienes Equipos. ¿Deseas crear una equipo?</p>
+                <a href="{% url 'registro_equipo' %}">Crear Equipo</a>
+            {% endif %}
+        </div>
+    </section>
+
+{% endblock content %}
+
+

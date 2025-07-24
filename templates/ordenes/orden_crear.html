@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="main">
+  <div class="main-top">
+    <h1>Crear Orden de Trabajo</h1>
+    <a href="{% url 'listar_ordenes' %}" class="button-form">Ver Órdenes</a>
+  </div>
+
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn">Crear Orden</button>
+  </form>
+</section>
+{% endblock %}

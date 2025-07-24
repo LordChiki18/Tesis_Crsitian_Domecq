@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <section class="main">
+        <div class="main-top">
+            <h1>Mis Equipos</h1>
+            <a href="{% url 'registro_equipo' %}" class="create-account-button">Crear Equipo</a>
+        </div>
+        <div class="main-skills">
+            {% if equipos %}
+
+                <table>
+                    <tr>
+                        <th>Equipo</th>
+                        <th>Marca</th>
+                        <th>Modelo</th>
+                        <th>Potencia</th>
+                        <th>Voltaje</th>
+                        <th>RPM</th>
+                        <th>Fase</th>
+                        <th>Opciones</th>
+                    </tr>
+                    {% for equipo in equipos %}
+                        <tr>
+                            <td>{{ equipo.tipo_equipo }}</td>
+                            <td>{{ equipo.marca }}</td>
+                            <td>{{ equipo.modelo }}</td>
+                            <td>{{ equipo.potencia_hp_kw }}</td>
+                            <td>{{ equipo.voltaje }}</td>
+                            <td>{{ equipo.rpm }}</td>
+                            <td>{{ equipo.fase }}</td>
+                            <td>
+                                <a href="{% url 'ver_equipo' equipo.equipo_id %}">Ver</a>
+                                <a href="{% url 'editar_equipo' equipo.equipo_id %}">Editar</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </table>
+                </div>
+                <div class="pagination">
+                    <div class="pagination-left">
+                        Página {{ equipos.number }} de {{ equipos.paginator.num_pages }}
+                    </div>
+
+                    <div class="pagination-right">
+                        <div class="pagination-links">
+                            {% if equipos.has_previous %}
+                                <a href="?page=1">&laquo; Primero</a>
+                                <a href="?page={{ equipos.previous_page_number }}">Anterior</a>
+                            {% endif %}
+                            {% if equipos.has_next %}
+                                <a href="?page={{ equipos.next_page_number }}">Siguiente</a>
+                                <a href="?page={{ equipos.paginator.num_pages }}">Último &raquo;</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+
+            {% else %}
+                <p>No tienes Equipos. ¿Deseas crear una equipo?</p>
+                <a href="{% url 'registro_equipo' %}">Crear Equipo</a>
+            {% endif %}
+        </div>
+    </section>
+
+{% endblock content %}
+
+
